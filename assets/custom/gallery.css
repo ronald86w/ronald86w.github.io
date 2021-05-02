@@ -1,0 +1,48 @@
+/* The grid: Four equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 16.6%;
+  padding: 1px;
+}
+
+/* Style the images inside the grid */
+.column1 img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column1 img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container1 {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: relative;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 16;
+  right: 20px;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+}
