@@ -2311,8 +2311,8 @@ a.resume-link{color:#4f4f4f}
 a.resume-link:hover{color:#D67553}
 .resume-profile-image{max-width:120px}
 .resume-intro{font-size:0.875rem}
-.resume-main .item-title{font-size:1rem}
-.resume-main .item-meta{font-size:0.75rem}
+.resume-main .item-title{font-size:1.0rem}
+.resume-main .item-meta{font-size:0.8rem}
 .resume-main .item-content{font-size:0.875rem}
 .resume-aside{border-left:1px solid rgba(0,0,0,0.08)}
 .resume-aside .item{font-size:0.875rem}
