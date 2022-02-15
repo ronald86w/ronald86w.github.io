@@ -19,7 +19,8 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-9.css">
-
+	<link href="assets/custom/gallery.css" rel="stylesheet">
+	<link href="assets/custom/slideshow.css" rel="stylesheet">
 </head> 
 
 <body>
@@ -94,15 +95,161 @@
 	</header>
 	    
     <div class="main-wrapper">
-	    <section class="cta-section theme-bg-light py-5">
-		    <div class="container text-center single-col-max-width">
-			    
-				<h2 class="heading">Page Under Construction....</h2>
-				<h2 class="heading">Please visit the previous version <a href="https://ronald86w.wixsite.com/leveldesign/lasermaze" target="_blank">here</a>.</h2>
-			    
+	   	 <section class="cta-section theme-bg-light py-5">
+		    <div class="container single-col-max-width">
+			    <h2 class="heading text-center">Solo Project: Laser Maze</h2>
+			    <div class="project-intro text-center">
+					<p class="mb-0 lead">A 3D puzzle game for a single player</p>
+				</div>
 			    
 		    </div><!--//container-->
 	    </section>
+	    
+		
+		
+		 <section class="project px-3 py-3 p-md-5">
+		    <div class="container">
+			    <div class="project-meta media flex-column flex-md-row p-4 theme-bg-light">
+				
+				    <img class="project-thumb mb-3 mb-md-0 mr-md-5 rounded d-none d-md-inline-block" src="assets\images\project\Laser\coverimage.jpg" alt="">
+				
+					<div class="media-body">
+					    <div class="client-info">
+						    <h3 class="client-name font-weight-bold mb-4">Development Info</h3>						    
+						    <ul class="client-meta list-unstyled mb-4">
+							    <li class="mb-2"><i class="fas fa-laptop fa-fw mr-2"></i><span class="metric-name">Development Softwares:</span> Unreal Engine 4.25, 3Ds Max, Photoshop</li>
+								<li class="mb-2"><i class="fas fa-list-alt fa-fw mr-2"></i><span class="metric-name">Time Spent:</span> 40 - 50 Hours</li>
+								<li class="mb-2"><i class="fas fa-calendar-check fa-fw mr-2"></i><span class="metric-name">Shipped Date:</span> 01/31/2021</li>							    
+						    </ul>
+							
+						    <h3 class="client-name font-weight-bold mb-4">Design Goals</h3>
+							
+							<ul class="mb-4 client-meta">
+							    <li class="mb-1">Deliver a complete puzzle game with multiple uses of lasr reflecting mechanics</li>
+							    <li class="mb-1">Implement good puzzle design theories into levels</li>
+							    <li class="mb-1">Practice and improve UE blueprint scripting skills</li>
+								<li class="mb-1">Acquire basic texturing and modeling abilities</li>
+						    </ul>					
+					
+					    </div>											
+					</div><!--//media-body-->
+				</div><!--//project-meta-->
+				<div class="project-sections py-3">		
+					<div class="project-section mb-4">
+					   <div class="row mt-5">
+						    <div class="col-12 col-lg-7 mb-3">
+								<h3 class="project-section-title mb-3">Game Mechanics</h3>
+								<img class="img-fluid" width="100%" src="assets\images\project\Laser\mechanics.jpg" alt="image">
+							
+						    </div>					    						
+						    <div class="col-12 col-lg-5 mb-3">
+							 <h3 class="project-section-title mb-3">Game Description</h3>
+							 <p align="justify" class = "mb-3">
+								Stuck in a sterile environment where devices are controlled by laser, the player must acquire the abilities of interacting with 
+								laser reflectors to <span class="metric-name">rediect laser beams </span>so that they are able to escape from imprisonment. 
+							</p>
+							<img class="img-fluid offset-2" width="60%" src="assets\images\project\Laser\core loop.jpg" alt="image">
+							<p align="justify" class = "mb-3">
+								This project serves as a practice for myself to practice logical thinking and script with Unreal Engine, as well as a valuable chance to explore
+								my puzzle design style. If you're interested in how I wrote the functionalities and designed the levels, please click 
+								<a href="https://ronald86w.wixsite.com/leveldesign/lasermaze" target="_blank">here</a>
+								for detailed information.
+							</p>
+							
+							
+							 <h3 class="project-section-title mb-3">Game Highlight</h3>
+							    <div class="embed-responsive embed-responsive-16by9 mb-3">
+								<iframe width="560" height="315"  src="https://www.youtube.com/embed/DCC7a5nTims" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+								</div>
+								
+							
+						    </div>
+							
+							
+						    </div>
+							
+					    </div>
+						
+				</div><!--//project-section-->
+				
+					<div class="project-section">
+					     <h3 class="project-section-title mb-3">Coding Examples</h3>
+						 
+						 
+							<!-- Slideshow container -->
+								<div class="slideshow-container">
+								  <!-- Full-width images with number and caption text -->
+								  <div class="mySlides" align="justify">
+									<h5> Example 1: Cast Laser </h5>
+									<h6> Design Goals:</h6>
+									<ul><li>To generate laser beams at the correct positions</li></ul>
+									
+									<h6> Design Methods:</h6>
+									<ul><li >Call <span class="metric-name"><i>LineTraceByChannel </i> </span>function to simulate the laser.</li>
+									<li>Raycast starts from the laser shooter, continues when hits any kind of reflectors, and ends when hits walls, obstacles, and receivers.</li>
+									<li>Call <span class="metric-name"><i>SpawnActor  </i> </span>function to draw cylinder shape with laser beam materials.</li></ul>
+									
+									<h6> Problem Solving:</h6>
+									<ul><li>To avoid an endless loop when two reflectors direct lasers to each other, a boolean tag is added to the reflector blueprint. 
+									It's tagged as true when a reflector has received a laser, and lasers won't keep shooting if meets such a reflector.</li>
+									<li>Laser beam actors are stored in the shooter blueprint when they are spawned. They will be cleaned every new cast. </li></ul>
+									<h6> Codes:</h6>																	
+									<embed type="text/html" src="https://blueprintue.com/render/knx73t8i" width="100%" height=620 >									
+								  </div>
+
+								  <div class="mySlides" align="justify">
+									<h5> Example 2: The Push Interaction</h5>
+									<h6> Design Goals:</h6>
+									<ul><li>To move the reflector to a new position after the player pushes</li></ul>
+									
+									<h6> Design Methods:</h6>
+									<ul><li  align="justify">By using <span class="metric-name"><i>min(abs(x_offset, y_offset)) </i> </span> to determine the pushing direction. The offset means the distance between the player and the target on the corresponding axis. </li>
+									<li align="justify">Call <span class="metric-name"><i>Normalize </i> </span> function to calculate the world location of the destination.</li>
+									<li  align="justify">Call <span class="metric-name"><i>BoxTraceByChannel </i> </span> function to the new location to double-check if the pushing operation is allowed.</li></ul>
+									
+									<h6> Problem Solving:</h6>
+									<ul><li align="justify">To simulate the movement of the reflector, a <span class="metric-name"><i>timeline  </i> </span>function is implemented.</li>
+									<li align="justify">In order to update laser beam locations when the reflector is moving, a parameter is added to the timeline. 
+									<span class="metric-name"><i>Cast Laser  </i> </span>function will be called each time the parameter reaches a peak.</li></ul>
+									<h6> Codes:</h6>																	
+									<embed type="text/html" src="https://blueprintue.com/render/wqd-x8ew" width="100%" height=600 >	
+								  </div>
+
+								  <div class="mySlides" align="justify">
+									<h5> Example 3: Show HUD on the aiming object</h5>
+									<h6 > Design Goals:</h6>
+									<ul><li>Show HUD on reflector objects when the player is targeting at it in a distance</li></ul>
+									
+									<h6> Design Methods:</h6>
+									<ul><li>Define an <span class="metric-name"><i>LM_Interaction BPC  </i> </span>to deal with interaction.</li>
+									<li>Call <span class="metric-name"><i>SphereTraceByChannel  </i> </span>function to find the target in distance.</li>
+									<li>According to the actor type show different HUD information.</li></ul>																
+									<h6> Codes:</h6>																	
+									<embed type="text/html" src="https://blueprintue.com/render/oivv935r" width="100%" height=600 >	
+								  </div>
+
+								  <!-- Next and previous buttons -->
+								  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+								</div>
+								<br>
+
+								<!-- The dots/circles -->
+								<div style="text-align:center">
+								  <span class="dot" onclick="currentSlide(1)"></span>
+								  <span class="dot" onclick="currentSlide(2)"></span>
+								  <span class="dot" onclick="currentSlide(3)"></span>
+								</div>						
+							
+					
+
+					</div>			
+					
+					
+
+				</div>
+		    </div>
+	    </section> <!--//main-content section-->
 	    
 	    <footer class="footer text-center py-4">
 			<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
@@ -123,8 +270,8 @@
 
     <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
     <script src="assets/js/demo/style-switcher.js"></script>     
-    
-
+    <script src="assets/custom/gallery.js"></script>   
+	<script src="assets/custom/slideshow.js"></script> 
 </body>
 </html> 
 
