@@ -2250,7 +2250,7 @@ hr{border-color:rgba(0,0,0,0.08)}
 .project-card .card-img{border-radius:0}
 .project-card .card-title{font-size:1.125rem}
 .project-card .card-text{font-size:0.875rem}
-.project-card .card-img-holder{max-height:200px;overflow:hidden;vertical-align:middle}
+.project-card .card-img-holder{max-height:280px;overflow:hidden;vertical-align:middle}
 .project-card .link-mask{position:absolute;left:0;top:0;width:100%;height:100%;visibility:hidden;transition:all 0.4s ease-in-out}
 @media (prefers-reduced-motion: reduce){.project-card .link-mask{transition:none}
 }
